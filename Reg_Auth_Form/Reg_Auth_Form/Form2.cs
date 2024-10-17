@@ -59,7 +59,7 @@ namespace Reg_Auth_Form
         private void buttonSendPassword_Click(object sender, EventArgs e)
         {
             MailAddress from = new MailAddress("zaid-mingaliev@mail.ru", "Zaid");
-            MailAddress to = new MailAddress();
+            MailAddress to = new MailAddress(textBoxEmail.Text);
             MailMessage m = new MailMessage(from, to);
             m.Subject = "Тест";
             using (UserContext db  = new UserContext())
